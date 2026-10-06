@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <title>My Cars</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="#galeria">MY CARS</a>
+            <a href="#about">ABOUT</a>
+            <a href="#contacto">CONTACT ME</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <article>
+            <section id="galeria">
+
+                <div id="hijo1">
+                    <img src="{% static 'images/coche1.svg' %}" alt="Coche deportivo rojo">
+                    <img src="{% static 'images/coche4.svg' %}" alt="Coche deportivo azul">
+                    <img src="{% static 'images/coche3.svg' %}" alt="Coche clásico">
+                </div>
+
+                <div id="hijo2">
+                    <img src="{% static 'images/coche5.svg' %}" alt="Coche urbano">
+                    <img src="{% static 'images/coche2.svg' %}" alt="Coche deportivo negro">
+                </div>
+
+            </section>
+        </article>
+
+
+        <section id="about">
+
+            <h1>About Cars</h1>
+
+            <figure>
+                <img src="{% static 'images/coche6.svg' %}" 
+                     alt="Coche moderno en carretera">
+            </figure>
+
+            <p>
+                Los coches combinan diseño, tecnología y movilidad para transformar
+                la forma en la que nos desplazamos. Desde los modelos clásicos hasta
+                los vehículos deportivos y eléctricos, cada automóvil tiene una
+                personalidad y una historia propia. Esta página reúne algunos estilos
+                diferentes para mostrar la evolución del automóvil y los elementos que
+                hacen especial a cada modelo: su diseño, rendimiento, comodidad y
+                tecnología.
+            </p>
+
+        </section>
+
+
+        <section id="contacto">
+
+            <h2 id="titulocontacto">¿Quieres hablar de coches?</h2>
+
+            <form action="#" method="post">
+
+                <p>
+                    <label for="nombre">Name</label>
+                    <input type="text" id="nombre" name="nombre">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+
+                    <label for="mensaje">Message</label>
+                    <input type="text" id="mensaje" name="mensaje">
+                </p>
+
+                <button type="submit">Send</button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>Made by Jose Balanza</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+}
+
+body {
+    margin: 0;
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    display: block;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+/* Header */
+header {
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: rgb(53, 47, 47);
+}
+
+/* Barra de navegacion */
+nav {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: rgb(112, 9, 9);
+}
+
+/* General de secciones */
+#about,
+#contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Galeria */
+#galeria {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 50px;
+    padding: 20px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#hijo1,
+#hijo2 {
+    flex: 1;
+    min-width: 0;
+}
+
+#galeria img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Especificacion de tamanio imagenes y texto */
+#about {
+    padding: 20px;
+}
+
+#about img {
+    width: min(320px, 100%);
+    height: auto;
+}
+
+#about p {
+    width: min(700px, 100%);
+    text-align: center;
+}
+
+#titulocontacto {
+    color: rgb(146, 26, 26);
+}
+
+#contacto {
+    padding: 20px;
+}
+
+#contacto form {
+    width: min(700px, 100%);
+}
+
+#contacto input {
+    display: block;
+    width: 100%;
+    height: 35px;
+    margin: 5px 0 20px;
+    padding: 5px 8px;
+}
+
+#contacto button {
+    width: 100%;
+    min-height: 35px;
+    margin-bottom: 40px;
+    color: white;
+    background-color: rgb(37, 35, 35);
+    border: 0;
+    cursor: pointer;
+}
+
+#contacto button:hover {
+    background-color: rgb(140, 140, 140);
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    margin: 0;
+    color: gray;
+    text-align: center;
+    background-color: rgb(53, 47, 47);
+}
+
+/* RESPONSIVE: movil */
+@media (max-width: 768px) {
+    header {
+        padding: 12px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    #galeria {
+        flex-direction: column;
+        gap: 0;
+        padding: 12px;
+        margin-bottom: 30px;
+    }
+
+    #hijo1,
+    #hijo2 {
+        width: 100%;
+    }
+
+    #galeria img {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    #about {
+        padding: 15px;
+    }
+
+    #about p {
+        text-align: left;
+    }
+
+    #contacto {
+        padding: 15px;
+    }
+}
+
+/* Pantallas muy pequenas */
+@media (max-width: 400px) {
+    nav a {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    #galeria {
+        padding: 8px;
+    }
+}
