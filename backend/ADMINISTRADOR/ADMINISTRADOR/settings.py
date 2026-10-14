@@ -30,7 +30,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
+#Configuration module APP
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -53,6 +53,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'ADMINISTRADOR.urls'
 
+#Configuration templates, HTML initial web
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
