@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/script.js' %}" defer></script>
+
+    <title>AdminPanel | Inicio</title>
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <aside class="sidebar">
+            <a href="/" class="logo">Admin<span>Panel</span></a>
+
+            <nav class="menu">
+                <a href="#inicio" class="menu-link active">
+                    <span>⌂</span> Inicio
+                </a>
+                <a href="#registros" class="menu-link">
+                    <span>▤</span> Registros
+                </a>
+                <a href="#actividad" class="menu-link">
+                    <span>◷</span> Actividad
+                </a>
+                <a href="#informes" class="menu-link">
+                    <span>▥</span> Informes
+                </a>
+                <a href="#configuracion" class="menu-link">
+                    <span>⚙</span> Configuración
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span class="status-dot"></span>
+                Sistema operativo
+            </div>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">PANEL DE CONTROL</p>
+                    <h1>Inicio</h1>
+                </div>
+
+                <div class="user-profile">
+                    <div class="avatar">JD</div>
+                    <div>
+                        <strong>Administrador</strong>
+                        <small>Usuario principal</small>
+                    </div>
+                </div>
+            </header>
+
+            {% block contenido %}
+
+            <section id="inicio" class="welcome">
+                <div>
+                    <p class="eyebrow">RESUMEN GENERAL</p>
+                    <h2>Bienvenido al panel</h2>
+                    <p>
+                        Gestiona tus datos, consulta la actividad
+                        y accede rápidamente a las herramientas.
+                    </p>
+                </div>
+
+                <a href="#registros" class="primary-button">
+                    Ver registros →
+                </a>
+            </section>
+
+            <section class="stats-grid" aria-label="Estadísticas">
+
+                <article class="stat-card">
+                    <div class="stat-heading">
+                        <span>Total de registros</span>
+                        <span class="stat-icon blue">▤</span>
+                    </div>
+                    <strong class="stat-number">1.284</strong>
+                    <p class="stat-description">Registros almacenados</p>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-heading">
+                        <span>Usuarios activos</span>
+                        <span class="stat-icon green">♙</span>
+                    </div>
+                    <strong class="stat-number">48</strong>
+                    <p class="stat-description">Usuarios registrados</p>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-heading">
+                        <span>Tareas pendientes</span>
+                        <span class="stat-icon orange">◷</span>
+                    </div>
+                    <strong class="stat-number">12</strong>
+                    <p class="stat-description">Requieren seguimiento</p>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-heading">
+                        <span>Incidencias</span>
+                        <span class="stat-icon red">!</span>
+                    </div>
+                    <strong class="stat-number">3</strong>
+                    <p class="stat-description">Pendientes de revisión</p>
+                </article>
+
+            </section>
+
+            <section class="content-grid">
+
+                <article id="registros" class="panel records-panel">
+                    <div class="panel-header">
+                        <div>
+                            <h2>Registros recientes</h2>
+                            <p>Últimos elementos añadidos al sistema</p>
+                        </div>
+                        <a href="#registros" class="text-link">Ver todos →</a>
+                    </div>
+
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Elemento</th>
+                                    <th>Categoría</th>
+                                    <th>Estado</th>
+                                    <th>Fecha</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <strong>Registro #001</strong>
+                                        <small>Elemento de ejemplo</small>
+                                    </td>
+                                    <td>General</td>
+                                    <td><span class="badge completed">Completado</span></td>
+                                    <td>13/10/2026</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <strong>Registro #002</strong>
+                                        <small>Elemento de ejemplo</small>
+                                    </td>
+                                    <td>Gestión</td>
+                                    <td><span class="badge pending">Pendiente</span></td>
+                                    <td>12/10/2026</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <strong>Registro #003</strong>
+                                        <small>Elemento de ejemplo</small>
+                                    </td>
+                                    <td>General</td>
+                                    <td><span class="badge completed">Completado</span></td>
+                                    <td>11/10/2026</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <strong>Registro #004</strong>
+                                        <small>Elemento de ejemplo</small>
+                                    </td>
+                                    <td>Soporte</td>
+                                    <td><span class="badge review">En revisión</span></td>
+                                    <td>10/10/2026</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+
+                <article id="actividad" class="panel activity-panel">
+                    <div class="panel-header">
+                        <div>
+                            <h2>Actividad reciente</h2>
+                            <p>Últimos movimientos</p>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <span class="activity-marker blue-marker"></span>
+                        <div>
+                            <strong>Nuevo registro</strong>
+                            <p>Se ha añadido un elemento.</p>
+                            <small>Hace 10 minutos</small>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <span class="activity-marker green-marker"></span>
+                        <div>
+                            <strong>Datos actualizados</strong>
+                            <p>Se ha modificado un registro.</p>
+                            <small>Hace 35 minutos</small>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <span class="activity-marker orange-marker"></span>
+                        <div>
+                            <strong>Tarea pendiente</strong>
+                            <p>Hay una tarea por revisar.</p>
+                            <small>Hace 1 hora</small>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+
+            <section id="informes" class="quick-actions">
+                <h2>Accesos rápidos</h2>
+
+                <div class="actions-grid">
+                    <a href="#registros" class="action-card">
+                        <span>＋</span>
+                        <div>
+                            <strong>Nuevo registro</strong>
+                            <p>Añadir información al sistema</p>
+                        </div>
+                        <span class="action-arrow">→</span>
+                    </a>
+
+                    <a href="#informes" class="action-card">
+                        <span>▥</span>
+                        <div>
+                            <strong>Consultar informes</strong>
+                            <p>Revisar datos y resultados</p>
+                        </div>
+                        <span class="action-arrow">→</span>
+                    </a>
+
+                    <a href="#configuracion" class="action-card">
+                        <span>⚙</span>
+                        <div>
+                            <strong>Configuración</strong>
+                            <p>Gestionar las preferencias</p>
+                        </div>
+                        <span class="action-arrow">→</span>
+                    </a>
+                </div>
+            </section>
+
+            {% endblock contenido %}
+
+            <footer class="footer">
+                <p>AdminPanel · Aplicación de administración</p>
+                <p>Versión 1.0</p>
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
