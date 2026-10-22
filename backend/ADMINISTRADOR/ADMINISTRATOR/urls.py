@@ -17,7 +17,15 @@ Including another URLconf
 from django.urls import path
 from . import views
 
+app_name = "ADMINISTRATOR"
+
+
 #ADMINISTRATOR/
 urlpatterns = [
- path('', views.ADMINISTRATOR)
+ path('', views.ADMINISTRATOR, name='homepage')
+    
+]
+
+urlpatterns = [
+    path('', views.ADMINISTRATOR, name='homepage'), 
 ]
