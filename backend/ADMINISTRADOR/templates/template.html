@@ -18,10 +18,10 @@
     <div class="dashboard">
 
         <aside class="sidebar">
-            <a href="/" class="logo">Admin<span>Panel</span></a>
+            <a href="{% url 'ADMINISTRATOR:homepage' %}" class="logo">Admin<span>Panel</span></a>
 
             <nav class="menu">
-                <a href="#inicio" class="menu-link active">
+                <a href="{% url 'homepage' %}" class="menu-link active">
                     <span>⌂</span> Inicio
                 </a>
                 <a href="#registros" class="menu-link">

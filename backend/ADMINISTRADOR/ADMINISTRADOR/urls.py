@@ -20,11 +20,13 @@ from . import views
 
 
 urlpatterns = [
-#admin page
- path('admin/', admin.site.urls),
- #initial page
- path('', views.homepage),
- # Esta línea añade automáticamente todas las urls que he vinculado en el
- # punto anterior 
- path('ADMINISTRATOR/', include('ADMINISTRATOR.urls'))
+    # Admin page
+    path('admin/', admin.site.urls),
+
+    # Homepage
+    path('', views.homepage, name='homepage'),
+
+    # Include application URLs
+    path('ADMINISTRATOR/', include('ADMINISTRATOR.urls')),
+    path('calendario/', include('calendario.urls')),
 ]
